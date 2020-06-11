@@ -1,0 +1,21 @@
+- name: Install Git Extras
+  homebrew: name=git-extras
+
+- name: Install Git Lfs
+  homebrew: name=git-lfs
+
+- name: Link gitconfig
+  file:
+    src: "{{ playbook_dir }}/../files/gitconfig"
+    dest: ~/.gitconfig
+    state: link
+    force: true
+  tags: dotfiles
+
+- name: Link gitignore_global
+  file:
+    src: "{{ playbook_dir }}/../files/gitignore_global"
+    dest: ~/.gitignore_global
+    state: link
+    force: true
+  tags: dotfiles

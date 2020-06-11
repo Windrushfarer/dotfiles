@@ -1,0 +1,80 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "css.validate": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120],
+  "editor.snippetSuggestions": "top",
+  "files.insertFinalNewline": true,
+  "keyboard.dispatch": "keyCode",
+  "terminal.external.osxExec": "/Applications/iTerm.app",
+  "tslint.autoFixOnSave": true,
+  "vim.enableNeovim": true,
+  "window.openFilesInNewWindow": "off",
+  "window.zoomLevel": 0,
+  "files.associations": {
+    "*.js": "javascriptreact",
+    ".browserslistrc": "properties",
+    ".eslintrc": "jsonc"
+  },
+  "files.exclude": {
+    ".enb": true,
+    ".npm": true,
+    ".pulp-cache": true,
+    ".stack-work": true,
+    "**/node_modules": true,
+    "bower_components": true,
+    "build/react/assets": true,
+    "output": true
+  },
+  "workbench.colorTheme": "Default Light+",
+  "[markdown]": {},
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "breadcrumbs.enabled": true,
+  "workbench.statusBar.visible": true,
+  "prettier.printWidth": 100,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "explorer.confirmDragAndDrop": false,
+  "search.location": "sidebar",
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "prettier.jsxSingleQuote": true,
+  "javascript.autoClosingTags": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "devtool"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.tsserver.log": "verbose",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.gotoLocation.multiple": "goto",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "extensions.ignoreRecommendations": false
+}

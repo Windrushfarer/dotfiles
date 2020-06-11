@@ -1,0 +1,26 @@
+[user]
+  name = Windrushfarer
+  email = windrushfarer@gmail.com
+[alias]
+  co = checkout
+  cb = checkout -b
+  st = status
+  b = branch
+  rbi = rebase -i
+  puf = push --force-with-lease
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[push]
+  default = current
+[core]
+  excludesfile = /Users/windrushfarer/.gitignore_global
+  editor = code --wait
+  ignorecase = false
+  autocrlf = false
+  safecrlf = true
+[color]
+  ui = always
+[diff]
+  compactionHeuristic = true
+[rerere]
+  enabled = true
+

@@ -1,0 +1,19 @@
+export ZSH=/Users/windrushfarer/.oh-my-zsh
+ZSH_THEME="cobalt2"
+
+DEFAULT_USER="windrushfarer"
+
+# use λ instead of ➜ in prompt
+local ret_status=" %(?:%{$fg_bold[green]%}λ:%{$fg_bold[red]%}λ %s)"
+
+plugins=(git, jsontools, docker)
+
+tabs -2 # set tab size to 2 spaces
+
+source ~/.config/aliases
+source $ZSH/oh-my-zsh.sh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

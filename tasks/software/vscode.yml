@@ -1,0 +1,77 @@
+- name: Install VS Code
+  homebrew_cask: name=visual-studio-code
+
+- name: Create folder for vscode settings
+  file:
+    path: "~/Library/Application\ Support/Code/User/"
+    state: directory
+
+- name: Link vscode settings
+  file:
+    src: "{{ playbook_dir }}/../files/vscode/settings.json"
+    dest: "~/Library/Application\ Support/Code/User/settings.json"
+    state: link
+    force: true
+
+- name: Link vscode keybindings
+  file:
+    src: "{{ playbook_dir }}/../files/vscode/keybindings.json"
+    dest: "~/Library/Application\ Support/Code/User/keybindings.json"
+    state: link
+    force: true
+
+- name: Create folder for vscode snippets
+  file:
+    path: "~/Library/Application\ Support/Code/User/snippets"
+    state: directory
+
+- name: Link vscode snippets
+  file:
+    src: "{{ playbook_dir }}/../files/vscode/snippets.json"
+    path: "~/Library/Application\ Support/Code/User/snippets/{{ file }}"
+    state: link
+    force: true
+  with_items:
+    - javascript.json
+    - javascriptreact.json
+    - typescript.json
+    - typescriptreact.json
+  loop_control:
+    loop_var: file
+
+- name: Install VSCode extensions
+  vscode:
+    extensions:
+      - EditorConfig.EditorConfig
+      - Orta.vscode-jest
+      - abierbaum.vscode-file-peek
+      - dbaeumer.vscode-eslint
+      - ionutvmi.path-autocomplete
+      - msjsdiag.debugger-for-chrome
+      - shinnn.stylelint
+      - waderyan.gitblame
+      - eamodio.gitlens
+      - pflannery.vscode-versionlens
+      - christian-kohler.npm-intellisense
+      - christian-kohler.path-intellisense
+      - CoenraadS.bracket-pair-colorizer
+      - cssho.vscode-svgviewer
+      - dracula-theme.theme-dracula
+      - ecmel.vscode-html-css
+      - equinusocio.vsc-material-theme-icons
+      - esbenp.prettier-vscode
+      - flowtype.flow-for-vscode
+      - formulahendry.auto-rename-tag
+      - k--kato.intellij-idea-keybindings
+      - kamikillerto.vscode-colorize
+      - leizongmin.node-module-intellisense
+      - mhmadhamster.postcss-language
+      - mikestead.dotenv
+      - ms-azuretools.vscode-docker
+      - ricard.postcss
+      - rokoroku.vscode-theme-darcula
+      - streetsidesoftware.code-spell-checker
+      - streetsidesoftware.code-spell-checker-russian
+      - vscode-icons-team.vscode-icons
+      - WallabyJs.quokka-vscode
+      - xr0master.webstorm-intellij-darcula-theme

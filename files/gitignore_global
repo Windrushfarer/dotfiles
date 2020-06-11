@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+*.swp
+*.sublime*
+.vscode/
+*.code-workspace
+.vagrant/
+*.icloud
+.realsync
+playground/
